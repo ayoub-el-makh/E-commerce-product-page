@@ -295,6 +295,11 @@ img {
     display: block;
 }
 
+.active-img {
+    outline: 0.1rem solid var(--orange);
+    opacity: 0.7;
+}
+
 @media only screen and (max-width: 600px) {
     :root {
         font-size: 8px;
