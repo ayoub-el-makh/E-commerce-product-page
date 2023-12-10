@@ -26,7 +26,9 @@ header {
     margin: 0 auto;
     border-bottom: 1px solid var(--Dark-grayish-blue);
 }
-
+.menu{
+    display:none;
+}
 .logo {
     margin-right: 2rem;
 }
@@ -107,6 +109,10 @@ nav ul li a {
     width: 30%;
 }
 
+.next, .previous{
+    display: none;
+}
+
 .slide-img {
     display: flex;
     justify-content: space-between;
@@ -162,16 +168,19 @@ img {
 
 .price {
     margin-top: 1.9rem;
+}
+
+.new-price{
     display: flex;
     align-items: center;
 }
 
-.price span:first-child {
+.new-price span:first-child {
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-.price span:last-child {
+.new-price span:last-child {
     background-color: var(--Pale-orange);
     color: var(--orange);
     padding: 0.1rem 0.3rem;
@@ -181,12 +190,12 @@ img {
     font-weight: 700;
 }
 
-.details-product>span {
+.old-price span {
     display: inline-block;
-    margin-top: 0.4rem;
+    margin-top: 0.7rem;
     text-decoration: line-through;
     color: var(--Dark-grayish-blue);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .Add-To-card {
@@ -249,3 +258,121 @@ img {
     box-shadow: 0px 2px 15px 1px var(--orange);
     transform: scale(1.02);
 }
+@media only screen and (max-width: 600px) {
+    :root{
+        font-size: 8px;
+    }
+    header{
+        border: none;
+    }
+    nav{
+        display: none;
+    }
+    .avatar img{
+        width: 60%;
+    }
+    .main{
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin:0;
+    }
+    .images-product{
+        width: 90%;
+    }
+    .main-img img{
+        height: 10%;
+    }
+    .slide-img{
+        display: none;
+    }
+    .details-product{
+        width: 85%;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .details-product h6{
+        font-size: 1.3rem;
+    }
+    .details-product h1{
+        font-size: 3.5rem;
+    }
+    .details-product p{
+        width: 100%;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        font-weight: 700
+    }
+    .price{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .new-price span:first-child{
+        font-size: 2.5rem;
+    }
+    .new-price span:last-child{
+        font-size: 1.5rem;
+        margin-left: 2rem;
+    }
+    .old-price span{
+        font-size: 1.5rem;
+    }
+    .Add-To-card{
+        flex-direction: column;
+        width: 100%;
+    }
+    .Quantity{
+        width: 100%;
+        padding: 1.2rem ;
+        margin-bottom: 1rem;
+    }
+    .Quantity span{
+        font-size: 2rem;
+    }
+    .btn{
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    .btn button{
+        width: 100%;
+        padding: 1.2rem;
+    }
+    .menu{
+        display: block;
+        margin-right: 2rem;
+        cursor: pointer;
+    }
+    .main-img{
+        position: relative;
+    }
+    .next{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 2%;
+        top: 45%;
+        background-color: white;
+        border-radius: 50%;
+        width: 8%;
+        height: 8%;
+    }
+
+    .previous{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 45%;
+        left: 2%;
+        background-color: white;
+        border-radius: 50%;
+        width: 8%;
+        height: 8%;
+    }
+  }
