@@ -26,9 +26,11 @@ header {
     margin: 0 auto;
     border-bottom: 1px solid var(--Dark-grayish-blue);
 }
-.menu{
-    display:none;
+
+.menu {
+    display: none;
 }
+
 .logo {
     margin-right: 2rem;
 }
@@ -109,7 +111,8 @@ nav ul li a {
     width: 30%;
 }
 
-.next, .previous{
+.next,
+.previous {
     display: none;
 }
 
@@ -170,7 +173,7 @@ img {
     margin-top: 1.9rem;
 }
 
-.new-price{
+.new-price {
     display: flex;
     align-items: center;
 }
@@ -258,100 +261,157 @@ img {
     box-shadow: 0px 2px 15px 1px var(--orange);
     transform: scale(1.02);
 }
+
+.cart {
+    position: absolute;
+    right: 3%;
+    top: 11%;
+    width: 25%;
+    height: 60vh;
+    border-radius: 0 0 0.4rem 0.4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    display: none;
+}
+
+.cart h5 {
+    padding: 1.2rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+
+.cart-product-shop {
+    display: flex;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    color: var(--Dark-grayish-blue);
+    font-weight: 700;
+    overflow-y: auto;
+}
+
+.toggelCard {
+    display: block;
+}
+
 @media only screen and (max-width: 600px) {
-    :root{
+    :root {
         font-size: 8px;
     }
-    header{
+
+    header {
         border: none;
     }
-    nav{
+
+    nav {
         display: none;
     }
-    .avatar img{
+
+    .avatar img {
         width: 60%;
     }
-    .main{
+
+    .main {
         flex-direction: column;
         width: 100%;
         justify-content: center;
         align-items: center;
-        margin:0;
+        margin: 0;
     }
-    .images-product{
+
+    .images-product {
         width: 90%;
     }
-    .main-img img{
+
+    .main-img img {
         height: 10%;
     }
-    .slide-img{
+
+    .slide-img {
         display: none;
     }
-    .details-product{
+
+    .details-product {
         width: 85%;
         margin-top: 1.5rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .details-product h6{
+
+    .details-product h6 {
         font-size: 1.3rem;
     }
-    .details-product h1{
+
+    .details-product h1 {
         font-size: 3.5rem;
     }
-    .details-product p{
+
+    .details-product p {
         width: 100%;
         font-size: 1.8rem;
         line-height: 2.5rem;
         font-weight: 700
     }
-    .price{
+
+    .price {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    .new-price span:first-child{
+
+    .new-price span:first-child {
         font-size: 2.5rem;
     }
-    .new-price span:last-child{
+
+    .new-price span:last-child {
         font-size: 1.5rem;
         margin-left: 2rem;
     }
-    .old-price span{
+
+    .old-price span {
         font-size: 1.5rem;
     }
-    .Add-To-card{
+
+    .Add-To-card {
         flex-direction: column;
         width: 100%;
     }
-    .Quantity{
+
+    .Quantity {
         width: 100%;
-        padding: 1.2rem ;
+        padding: 1.2rem;
         margin-bottom: 1rem;
     }
-    .Quantity span{
+
+    .Quantity span {
         font-size: 2rem;
     }
-    .btn{
+
+    .btn {
         width: 100%;
         margin-bottom: 0.5rem;
     }
-    .btn button{
+
+    .btn button {
         width: 100%;
         padding: 1.2rem;
     }
-    .menu{
+
+    .menu {
         display: block;
         margin-right: 2rem;
         cursor: pointer;
     }
-    .main-img{
+
+    .main-img {
         position: relative;
     }
-    .next{
-        display:flex;
+
+    .next {
+        display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
@@ -363,8 +423,8 @@ img {
         height: 8%;
     }
 
-    .previous{
-        display:flex;
+    .previous {
+        display: flex;
         justify-content: center;
         align-items: center;
         position: absolute;
@@ -375,4 +435,4 @@ img {
         width: 8%;
         height: 8%;
     }
-  }
+}
