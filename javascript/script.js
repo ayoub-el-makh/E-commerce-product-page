@@ -23,3 +23,26 @@ for (let el of childrenSlideImg) {
         this.classList.add('active-img');
     })
 };
+
+//Quantity contour
+function operation(num, op){
+    switch(op){
+        case "+": 
+            return ++num;
+        case "-":
+            return --num;
+    }
+}
+document.getElementById('plus').addEventListener('click',function(){
+    console.log(operation(1, "+"));
+    let quantityValue = document.getElementById('quantity-value');
+    quantityValue.textContent = operation(+quantityValue.innerHTML, "+");
+})
+
+document.getElementById('minus').addEventListener('click',function(){
+    let quantityValue = document.getElementById('quantity-value');
+    if(+quantityValue.textContent === 1 ){
+        return ;
+    };
+    quantityValue.textContent = operation(+quantityValue.innerHTML, "-");
+})
