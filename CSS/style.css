@@ -82,8 +82,26 @@ nav ul li a {
 .shopping-card {
     margin-right: 0.4rem;
     cursor: pointer;
+    position: relative;
 }
-
+.shopping-card:hover svg path{
+    fill: #151515;
+}
+#qte{
+    position: absolute;
+    top: -0.3rem;
+    left: 0.6rem;
+    color: white;
+    display: none;
+    width: 1.2rem;
+    height: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--orange);
+    border-radius: 40%;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
 .avatar {
     display: flex;
     justify-content: flex-end;
@@ -135,10 +153,17 @@ nav ul li a {
 
 .main-img {
     width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
 }
 
 .main-img img {
     width: 100%;
+    transition: all ease 1s;
+}
+
+.main-img img:hover {
+    transform: scale(1.2);
 }
 
 img {
@@ -267,7 +292,7 @@ img {
     right: 3%;
     top: 11%;
     width: 25%;
-    height: 60vh;
+    height: 33vh;
     border-radius: 0 0 0.4rem 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
@@ -281,14 +306,59 @@ img {
 }
 
 .cart-product-shop {
-    display: flex;
     width: 100%;
     height: 80%;
-    justify-content: center;
-    align-items: center;
     color: var(--Dark-grayish-blue);
     font-weight: 700;
-    overflow-y: auto;
+    margin-top: 1.3rem;
+}
+
+.btn-cart {
+    width: 80%;
+    margin: 0.8rem auto 0;
+}
+.product-info-details p{
+    font-weight: 400;
+}
+
+.btn-cart button {
+    width: 100%;
+    padding: 1rem;
+}
+.p-empty{
+    margin: 4.8rem 7.5rem;
+}
+.product-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.product-info-img {
+    width: 20%;
+}
+
+#total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: black;
+    margin-left: .4rem;
+}
+
+.product-info-details p:first-child {
+    margin-bottom: 0.7rem;
+}
+
+.product-info-details p:last-child {
+    margin-bottom: 0.4rem;
+}
+
+.product-info-img img {
+    width: 100%;
+}
+
+.product-info-icon {
+    cursor: pointer;
 }
 
 .toggelCard {
