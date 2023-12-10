@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300&family=Kumbh+Sans:wght@400;700&family=Poppins:wght@100&display=swap');
+
+:root {
+    font-size: 16px;
+    --orange: hsl(26, 100%, 55%);
+    --Pale-orange: hsl(25, 100%, 94%);
+    --Very-dark-blue: hsl(220, 13%, 13%);
+    --Dark-grayish-blue: hsl(219, 9%, 45%);
+    --Grayish-blue: hsl(220, 14%, 75%);
+    --Light-grayish-blue: hsl(223, 64%, 98%);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+header {
+    width: 85%;
+    display: flex;
+    padding: 1rem 0;
+    align-items: center;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--Dark-grayish-blue);
+}
+
+.logo {
+    margin-right: 2rem;
+}
+
+nav {
+    width: 40%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: var(--orange);
+    display: block;
+    top: 3rem;
+}
+
+nav ul li a:hover {
+    color: var(--Very-dark-blue);
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+
+.profile {
+    width: calc(85% - 55%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 19rem;
+}
+
+.shopping-card {
+    margin-right: 0.4rem;
+    cursor: pointer;
+}
+
+.avatar {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.avatar img {
+    width: 50%;
+}
+
+.avatar img:hover {
+    outline: 1px solid var(--orange);
+    border-radius: 50%;
+}
