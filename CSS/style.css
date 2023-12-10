@@ -2,6 +2,7 @@
 
 :root {
     font-size: 16px;
+    --Pale-orange: hsl(25, 100%, 94%);
     --orange: hsl(26, 100%, 55%);
     --Pale-orange: hsl(25, 100%, 94%);
     --Very-dark-blue: hsl(220, 13%, 13%);
@@ -87,9 +88,164 @@ nav ul li a {
 
 .avatar img {
     width: 50%;
+    transition: outline ease .7s;
 }
 
 .avatar img:hover {
-    outline: 1px solid var(--orange);
+    outline: 0.1rem solid var(--orange);
     border-radius: 50%;
+}
+
+.main {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: 7rem auto 0;
+}
+
+.images-product {
+    width: 30%;
+}
+
+.slide-img {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.slide-img img {
+    width: 20%;
+}
+
+.slide-img img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.main-img {
+    width: 100%;
+}
+
+.main-img img {
+    width: 100%;
+}
+
+img {
+    border-radius: 0.5rem;
+}
+
+.details-product {
+    margin-top: 2.5rem;
+    width: 50%;
+}
+
+.details-product h6 {
+    color: var(--orange);
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.details-product h1 {
+    font-size: 2.5rem;
+    width: 70%;
+}
+
+.details-product p {
+    color: var(--Dark-grayish-blue);
+    width: 70%;
+    line-height: 1.4rem;
+    font-size: 0.9rem;
+    margin-top: 2.1rem;
+}
+
+.price {
+    margin-top: 1.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.price span:first-child {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.price span:last-child {
+    background-color: var(--Pale-orange);
+    color: var(--orange);
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+    margin-left: 0.7rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.details-product>span {
+    display: inline-block;
+    margin-top: 0.4rem;
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+    font-size: 0.8rem;
+}
+
+.Add-To-card {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+
+.Quantity {
+    width: 35%;
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    align-items: center;
+    border-radius: 0.3rem;
+}
+
+.Quantity button {
+    display: flex;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    background: transparent;
+    border: none;
+}
+
+.Quantity button:last-child {
+    justify-content: flex-end;
+}
+
+.btn {
+    width: 60%;
+    display: flex;
+    align-items: center;
+}
+
+.btn span {
+    display: inline-block;
+    margin-left: 0.7rem;
+}
+
+.btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    background-color: var(--orange);
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    width: 85%;
+    color: white;
+    font-weight: 700;
+    transition: all ease 1s;
+}
+
+.btn button:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 15px 1px var(--orange);
+    transform: scale(1.02);
 }
