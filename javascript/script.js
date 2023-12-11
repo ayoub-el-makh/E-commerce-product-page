@@ -7,20 +7,20 @@ let menu = document.querySelector('.menu');
 shoppingCard.addEventListener('click', () => {
     cart.classList.toggle('toggelCard');
     let containes = navPhone.style.display;
-    if(containes === 'none'){
+    if (containes === 'none') {
         mainSection.classList.toggle('blurToggel');
     }
     navPhone.style.display = "none";
     closeCart();
 });
 
-function closeCart(){
+function closeCart() {
     let containes = cart.classList.contains('toggelCard');
-    if (containes){
-        mainSection.addEventListener('click', function (){
+    if (containes) {
+        mainSection.addEventListener('click', function () {
             cart.classList.remove('toggelCard')
             mainSection.classList.remove('blurToggel');
-            this.removeEventListener('click', ()=> false);
+            this.removeEventListener('click', () => false);
         })
     }
 }
@@ -96,7 +96,7 @@ addProduct.addEventListener('click', () => {
                     <div class="btn btn-cart">
                         <button>Chekout</button>
                     </div>`;
-    window.scroll({top: 0, behavior: "smooth"});
+    window.scroll({ top: 0, behavior: "smooth" });
 });
 
 function Delete() {
@@ -126,6 +126,16 @@ nextImg.addEventListener('click', () => {
     mainImg.src = `images/image-product-${num}-big.jpg`;
 });
 
+// add switch slide image 
+if (window.innerWidth <= 600) {
+    setInterval(() => {
+        num++;
+        if (num === 5) {
+            num = 1;
+        }
+        mainImg.src = `images/image-product-${num}-big.jpg`;
+    }, 2000)
+}
 
 //Making Navbar Section responsive for phone screen
 let iconClose = document.querySelector('.icon-close');
@@ -140,15 +150,15 @@ menu.addEventListener('click', () => {
     navPhone.style.display = "block";
     cart.classList.remove('toggelCard');
     let isBlur = mainSection.classList.contains('blurToggel');
-    if (!isBlur){
+    if (!isBlur) {
         mainSection.classList.add('blurToggel');
     }
     let containes = navPhone.style.display;
-    if (containes === 'block'){
-        mainSection.addEventListener('click', function (){
+    if (containes === 'block') {
+        mainSection.addEventListener('click', function () {
             navPhone.style.display = "none";
             mainSection.classList.remove('blurToggel');
-            this.removeEventListener('click', ()=> false);
+            this.removeEventListener('click', () => false);
         })
     }
 })
@@ -156,16 +166,19 @@ menu.addEventListener('click', () => {
 
 // add scroll up
 let scrollUp = document.querySelector('.up');
-window.addEventListener('scroll', ()=>{
+window.addEventListener('scroll', () => {
     let pScroll = window.scrollY;
-   if (pScroll >= 200){
+    if (pScroll >= 200) {
         scrollUp.style.display = "block";
-    } else{
-       scrollUp.style.display = "none";
-   }
+    } else {
+        scrollUp.style.display = "none";
+    }
 });
 
-scrollUp.addEventListener('click', function(){
-    scroll({top:0, behavior: "smooth"});
+scrollUp.addEventListener('click', function () {
+    scroll({ top: 0, behavior: "smooth" });
     this.style.display = "none";
 })
+
+
+
