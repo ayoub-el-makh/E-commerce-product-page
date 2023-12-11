@@ -1,11 +1,30 @@
 let shoppingCard = document.querySelector('.shopping-card');
 let cart = document.querySelector('.cart');
 let mainSection = document.querySelector('.main');
+let navPhone = document.querySelector('.nav-phone');
+let menu = document.querySelector('.menu');
 //Products in the shopping cart Section
 shoppingCard.addEventListener('click', () => {
     cart.classList.toggle('toggelCard');
-    mainSection.classList.toggle('blurToggel');
+    let containes = navPhone.style.display;
+    if(containes === 'none'){
+        mainSection.classList.toggle('blurToggel');
+    }
+    navPhone.style.display = "none";
+    closeCart();
 });
+
+function closeCart(){
+    let containes = cart.classList.contains('toggelCard');
+    if (containes){
+        mainSection.addEventListener('click', function (){
+            cart.classList.remove('toggelCard')
+            mainSection.classList.remove('blurToggel');
+            this.removeEventListener('click', ()=> false);
+        })
+    }
+}
+
 
 //Changing Product Image Section
 
@@ -77,6 +96,7 @@ addProduct.addEventListener('click', () => {
                     <div class="btn btn-cart">
                         <button>Chekout</button>
                     </div>`;
+    window.scroll({top: 0, behavior: "smooth"});
 });
 
 function Delete() {
@@ -109,12 +129,43 @@ nextImg.addEventListener('click', () => {
 
 //Making Navbar Section responsive for phone screen
 let iconClose = document.querySelector('.icon-close');
-let navPhone = document.querySelector('.nav-phone');
+
 iconClose.addEventListener('click', () => {
     navPhone.style.display = "none";
+    mainSection.classList.toggle('blurToggel');
 })
 
-let menu = document.querySelector('.menu');
+
 menu.addEventListener('click', () => {
     navPhone.style.display = "block";
+    cart.classList.remove('toggelCard');
+    let isBlur = mainSection.classList.contains('blurToggel');
+    if (!isBlur){
+        mainSection.classList.add('blurToggel');
+    }
+    let containes = navPhone.style.display;
+    if (containes === 'block'){
+        mainSection.addEventListener('click', function (){
+            navPhone.style.display = "none";
+            mainSection.classList.remove('blurToggel');
+            this.removeEventListener('click', ()=> false);
+        })
+    }
+})
+
+
+// add scroll up
+let scrollUp = document.querySelector('.up');
+window.addEventListener('scroll', ()=>{
+    let pScroll = window.scrollY;
+   if (pScroll >= 200){
+        scrollUp.style.display = "block";
+    } else{
+       scrollUp.style.display = "none";
+   }
+});
+
+scrollUp.addEventListener('click', function(){
+    scroll({top:0, behavior: "smooth"});
+    this.style.display = "none";
 })

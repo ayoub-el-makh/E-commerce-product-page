@@ -380,11 +380,24 @@ img {
     opacity: 0.7;
 }
 
-.nav-phone {
+
+.container{
+    position: relative;
+}
+.up{
+    width: 7%;
+    position: fixed;
+    right: 0rem;
+    bottom: 1rem;
+    cursor: pointer;
+    opacity: .6;
     display: none;
 }
+.up:hover{
+    opacity: 1;
+}
 
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     :root {
         font-size: 8px;
     }
