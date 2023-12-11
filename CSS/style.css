@@ -295,11 +295,12 @@ img {
     right: 3%;
     top: 11%;
     width: 25%;
-    height: 33vh;
+    height: 35vh;
     border-radius: 0 0 0.4rem 0.4rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
     display: none;
+    z-index: 999;
 }
 
 .cart h5 {
@@ -331,6 +332,7 @@ img {
 }
 
 .p-empty {
+    width: 50%;
     margin: 4.8rem 7.5rem;
 }
 
