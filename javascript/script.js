@@ -105,3 +105,16 @@ nextImg.addEventListener('click', () => {
     }
     mainImg.src = `images/image-product-${num}-big.jpg`;
 });
+
+
+//Making Navbar Section responsive for phone screen
+let iconClose = document.querySelector('.icon-close');
+let navPhone = document.querySelector('.nav-phone');
+iconClose.addEventListener('click', () => {
+    navPhone.style.display = "none";
+})
+
+let menu = document.querySelector('.menu');
+menu.addEventListener('click', () => {
+    navPhone.style.display = "block";
+})

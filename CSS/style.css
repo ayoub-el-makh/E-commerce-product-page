@@ -380,6 +380,10 @@ img {
     opacity: 0.7;
 }
 
+.nav-phone {
+    display: none;
+}
+
 @media only screen and (max-width: 600px) {
     :root {
         font-size: 8px;
@@ -574,5 +578,56 @@ img {
     .btn-cart {
         width: 80%;
         margin-top: 1.7rem;
+    }
+
+    .icon-close {
+        cursor: pointer;
+    }
+
+    .nav-phone {
+        width: 60%;
+        background-color: white;
+        height: 161vh;
+        position: absolute;
+        z-index: 100;
+        padding: 4rem;
+    }
+
+    .nav-phone div.nav-link ul {
+        list-style: none;
+    }
+
+    .nav-phone ul li {
+        position: relative;
+        margin-bottom: 2.5rem;
+        width: 45%;
+    }
+
+    .nav-phone ul li a {
+        text-decoration: none;
+        font-size: 3rem;
+        color: var(--Dark-grayish-blue);
+        padding: 3rem 3rem 3rem 0;
+    }
+
+    .nav-phone .nav-link ul li::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        background: var(--orange);
+        display: block;
+        top: 4rem;
+    }
+
+    .nav-phone .nav-link ul li a:hover {
+        color: var(--Very-dark-blue);
+    }
+
+    .nav-phone .nav-link ul li:hover::after {
+        width: 100%;
+    }
+
+    .nav-link {
+        margin-top: 4rem;
     }
 }
