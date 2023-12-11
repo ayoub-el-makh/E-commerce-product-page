@@ -84,10 +84,12 @@ nav ul li a {
     cursor: pointer;
     position: relative;
 }
-.shopping-card:hover svg path{
+
+.shopping-card:hover svg path {
     fill: #151515;
 }
-#qte{
+
+#qte {
     position: absolute;
     top: -0.3rem;
     left: 0.6rem;
@@ -102,6 +104,7 @@ nav ul li a {
     font-size: 0.6rem;
     font-weight: 700;
 }
+
 .avatar {
     display: flex;
     justify-content: flex-end;
@@ -159,10 +162,10 @@ nav ul li a {
 
 .main-img img {
     width: 100%;
-    transition: all ease 1s;
 }
 
 .main-img img:hover {
+    transition: all ease 1s;
     transform: scale(1.2);
 }
 
@@ -317,7 +320,8 @@ img {
     width: 80%;
     margin: 0.8rem auto 0;
 }
-.product-info-details p{
+
+.product-info-details p {
     font-weight: 400;
 }
 
@@ -325,9 +329,11 @@ img {
     width: 100%;
     padding: 1rem;
 }
-.p-empty{
+
+.p-empty {
     margin: 4.8rem 7.5rem;
 }
+
 .product-info {
     display: flex;
     justify-content: space-around;
@@ -365,6 +371,10 @@ img {
     display: block;
 }
 
+.blurToggel {
+    filter: blur(2px);
+}
+
 .active-img {
     outline: 0.1rem solid var(--orange);
     opacity: 0.7;
@@ -377,6 +387,8 @@ img {
 
     header {
         border: none;
+        height: 8rem;
+        width: 90%;
     }
 
     nav {
@@ -475,6 +487,10 @@ img {
         padding: 1.2rem;
     }
 
+    .main-img img:hover {
+        transform: scale(1);
+    }
+
     .menu {
         display: block;
         margin-right: 2rem;
@@ -496,6 +512,7 @@ img {
         border-radius: 50%;
         width: 8%;
         height: 8%;
+        cursor: pointer;
     }
 
     .previous {
@@ -503,11 +520,59 @@ img {
         justify-content: center;
         align-items: center;
         position: absolute;
+        z-index: 5;
         top: 45%;
         left: 2%;
         background-color: white;
         border-radius: 50%;
         width: 8%;
         height: 8%;
+        cursor: pointer;
+    }
+
+    #qte {
+        top: -0.5rem;
+        left: 1.2rem;
+        display: none;
+        width: 2.1rem;
+        height: 1.6rem;
+        font-size: 0.9rem;
+    }
+
+    .cart {
+        z-index: 999;
+        width: 84%;
+        right: 8%;
+        height: 34vh;
+        border-radius: 0.5rem;
+    }
+
+    .cart h5 {
+        font-size: 2rem;
+    }
+
+    .p-empty {
+        font-size: 2rem;
+        margin: 9rem 21.5rem;
+    }
+
+    #total {
+        font-size: 2.1rem;
+        margin-left: 1rem;
+    }
+
+    .product-info-details p:first-child {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .product-info-details p:last-child {
+        font-size: 1.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .btn-cart {
+        width: 80%;
+        margin-top: 1.7rem;
     }
 }
